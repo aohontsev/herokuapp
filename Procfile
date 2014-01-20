@@ -1,2 +1,2 @@
-web: python manage.py createdb --noinput;
-     gunicorn herokuapp.wsgi
+worker: python django-admin.py syncdb --noinput
+web: gunicorn herokuapp.wsgi
