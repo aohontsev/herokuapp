@@ -1,2 +1,2 @@
-web: python django-admin.py syncdb --noinput
+web: python manage.py syncdb
 web: gunicorn herokuapp.wsgi

@@ -1,3 +1,4 @@
 # requirements/dev.txt
 -r common.txt
 django-debug-toolbar==0.9.4
+dj_database_url==0.2.2
