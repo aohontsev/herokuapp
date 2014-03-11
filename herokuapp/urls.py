@@ -10,4 +10,5 @@ urlpatterns = patterns('',
 
     url(r'^$', views.index, name='index'),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^sunflower/', views.sunflower, name='sunflower'),
 )
