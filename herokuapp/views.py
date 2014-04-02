@@ -10,4 +10,4 @@ def index(request):
 
 
 def sunflower(request):
-    return render(request, 'sunflower.html')
+    return render(request, 'sunflower/index.html')
