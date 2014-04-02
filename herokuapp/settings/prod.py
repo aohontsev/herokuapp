@@ -12,4 +12,4 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # SECURITY WARNING: keep the secret key used in production secret!
 print os.environ
-SECRET_KEY = os.environ.get('_SECRET_KEY')
+SECRET_KEY = os.environ.get('SECRET_KEY')
