@@ -1,14 +1,25 @@
+from django.conf import settings
 from django.conf.urls import patterns, include, url
-from herokuapp import views
+from django.conf.urls.static import static
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
+
+# Uncomment the next two lines to enable the admin:
 from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    # Examples:
-    # url(r'^blog/', include('blog.urls')),
-
-    url(r'^$', views.index, name='index'),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^sunflower/', views.sunflower, name='sunflower'),
+    url(r'', include('apps.landingpage.urls')),
+    url(r'', include('apps.flyingbird.urls')),
+    url(r'', include('apps.sunflower.urls')),
 )
+
+urlpatterns += staticfiles_urlpatterns()
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+if settings.DEBUG:
+    import debug_toolbar
+    urlpatterns += patterns('',
+                            url(r'^__debug__/', include(debug_toolbar.urls)),
+                            )
