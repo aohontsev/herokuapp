@@ -62,7 +62,7 @@ DEBUG_TOOLBAR_PATCH_SETTINGS = False
 
 # http://django-debug-toolbar.readthedocs.org/en/latest/installation.html
 INTERNAL_IPS = (
-    '192.168.103.139',
+    '127.0.0.1',
     '192.168.103.12',
 )
 

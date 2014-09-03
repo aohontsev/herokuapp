@@ -1,12 +1,14 @@
-<!DOCTYPE html>
+{% extends 'landingpage/layout/layout.html' %}
 
-{% load static %}
 
-<html>
-<head>
-    <title></title>
-</head>
-<body>
+{% load static from staticfiles %}
+
+
+{% block title %}Anton Ockontsev{% endblock %}
+
+
+{% block page %}
     <a href="https://app.wercker.com/project/bykey/c2df78ec6cc5998450015a674b09b432"><img alt="Wercker status" src="https://app.wercker.com/status/c2df78ec6cc5998450015a674b09b432/m/"></a>
-</body>
-</html>
+{% endblock %}
+
+

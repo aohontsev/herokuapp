@@ -1,0 +1,47 @@
+{% extends 'landingpage/layout/body.html' %}
+
+
+{% block layout %}
+    <header class="header">
+        <div class="wrapper">
+            <a class="logo" href="/"></a>
+            <nav class="menu">
+                <ul class="menu__items">
+                    <li class="menu__item">
+                        <span class="menu__coming-soon">menu-item</span>
+                    </li>
+                </ul>
+            </nav>
+            {% comment %}
+            <aside class="search">
+                <form action="">
+                    <input class="search__query" type="text" placeholder="Поиск по сайту" /><!--
+                 --><button class="search__submit" type="submit">
+                        <span class="search__submit-text">Найти</span>
+                    </button>
+                </form>
+            </aside>
+            {% endcomment %}
+        </div>
+    </header>
+    <div class="content-wrapper">
+        {% block page %}{% endblock %}
+    </div>
+    <footer class="footer">
+        <div class="wrapper">
+            <ul class="footer__menu">
+                <li class="footer__menu-item">
+                    О проекте
+                </li>
+                <li class="footer__menu-item">
+                   Обратная связь
+                </li>
+            </ul>
+            {% block copyright %}
+            {% endblock %}
+            <span class="footer__copyright">
+                Сайт разработан <b>Baton Inc</b>
+            </span>
+        </div>
+    </footer>
+{% endblock %}
