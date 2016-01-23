@@ -91,14 +91,15 @@ MEDIA_URL = '/media/'
 STATIC_ROOT = normpath(join(SITE_ROOT, 'assets'))
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#static-url
-STATIC_URL = '/static/'
+STATIC_URL = '/assets/'
 
 # See: https://docs.djangoproject.com/en/dev/ref/contrib/staticfiles/#std:setting-STATICFILES_DIRS
 STATICFILES_DIRS = (
-    normpath(join(SITE_ROOT, SITE_NAME, 'static')),
+    #normpath(join(SITE_ROOT, SITE_NAME, 'static')),
     normpath(join(SITE_ROOT, 'apps', 'landingpage', 'static')),
     normpath(join(SITE_ROOT, 'apps', 'flyingbird', 'static')),
     normpath(join(SITE_ROOT, 'apps', 'sunflower', 'static')),
+    normpath(join(SITE_ROOT, 'apps', 'sveta', 'static')),
 )
 
 # See: https://docs.djangoproject.com/en/dev/ref/contrib/staticfiles/#staticfiles-finders
@@ -155,6 +156,7 @@ TEMPLATE_DIRS = (
     normpath(join(SITE_ROOT, 'apps', 'landingpage', 'templates')),
     normpath(join(SITE_ROOT, 'apps', 'flyingbird', 'templates')),
     normpath(join(SITE_ROOT, 'apps', 'sunflower', 'templates')),
+    normpath(join(SITE_ROOT, 'apps', 'sveta', 'templates')),
 )
 ########## END TEMPLATE CONFIGURATION
 
@@ -202,6 +204,7 @@ LOCAL_APPS = (
     'apps.landingpage',
     'apps.flyingbird',
     'apps.sunflower',
+    'apps.sveta',
 )
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps

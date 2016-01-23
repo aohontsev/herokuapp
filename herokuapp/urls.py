@@ -13,12 +13,12 @@ urlpatterns = patterns('',
     url(r'', include('apps.landingpage.urls')),
     url(r'', include('apps.flyingbird.urls')),
     url(r'', include('apps.sunflower.urls')),
+    url(r'', include('apps.sveta.urls')),
 )
 
 urlpatterns += staticfiles_urlpatterns()
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-print settings.DEBUG
 if settings.DEBUG:
     import debug_toolbar
     urlpatterns += patterns('',
