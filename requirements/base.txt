@@ -3,3 +3,4 @@ Django==1.7
 django-braces==1.4.0
 django-model-utils==2.0.3
 dj_static==0.0.6
+dj_database_url==0.2.2
